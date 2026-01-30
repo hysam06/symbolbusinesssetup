@@ -309,8 +309,8 @@
     height: 100%;
     padding: 20px;
     border-radius: 20px;
-    background-color: white;
-    /* Card background */
+    background-color: #ffffff;
+    /* Card background - White to pop against grey bg */
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid transparent;
     /* Prepare for border */

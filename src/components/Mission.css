@@ -4,8 +4,8 @@
     margin: 0 auto;
     min-height: var(--unit-100vh);
     position: relative;
-    /* Use a light background color */
-    background-color: #ffffff;
+    /* Use a light grey background color */
+    background-color: #f2f2f2;
     overflow: hidden;
     /* Ensure grid doesn't spill out */
 }
