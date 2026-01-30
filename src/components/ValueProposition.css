@@ -285,21 +285,25 @@
 /* Embedded State for Mission Page */
 .section-value.is-embedded {
     background-color: transparent;
-    padding-top: 200px;
-    padding-bottom: 100px;
+    padding: 120px 20px 100px;
     position: relative;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center everything */
 }
 
 /* Force standard grid behavior in embedded mode */
 .section-value.is-embedded .panel-blocks {
-    margin-top: 30px;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    /* Standardize gap */
     align-items: stretch;
-    /* Stretch items to same height */
+    width: 100%;
+    max-width: 1000px;
+    /* Constrict content box width as requested */
 }
 
 /* Standardize individual blocks with hover interaction */
@@ -307,19 +311,20 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 20px;
-    border-radius: 20px;
-    background-color: #ffffff;
-    /* Card background - White to pop against grey bg */
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid transparent;
-    /* Prepare for border */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section-value.is-embedded .block-value:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
-    border-color: rgba(0, 0, 0, 0.05);
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
 /* Reset any specific widths or offsets from original CSS */
@@ -328,56 +333,67 @@
     max-width: none !important;
     align-self: flex-start !important;
     aspect-ratio: 16 / 9 !important;
-    /* Force standard 16:9 ratio */
     margin: 0 0 20px 0;
     border-radius: 12px;
     overflow: hidden;
 }
 
 /* Update main title color in embedded mode */
+.section-value.is-embedded>.mask {
+    text-align: center;
+    width: 100%;
+}
+
 .section-value.is-embedded>.mask>.title {
-    color: var(--color-dark-purple);
-    /* Dark color for light mode */
+    color: var(--color-white);
     text-shadow: none;
-    font-size: 100px;
+    font-size: 56px;
+    /* Matched to Services page */
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    text-transform: none;
+    /* Ensure no unwanted transform unless specified */
 }
 
 /* Style for text blocks inside embedded mode */
 .section-value.is-embedded .block-value .title {
-    color: var(--color-dark-purple);
-    /* Dark color */
-    /* Removed box background styles */
+    color: var(--color-white);
     padding: 0;
     margin: 0 0 15px 0;
     width: 100%;
     text-align: left;
-    /* Align left like minimal style */
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .section-value.is-embedded .block-value .text {
-    color: var(--color-violet);
-    /* standard text color */
-    /* Removed box background styles */
+    color: var(--color-white);
     padding: 0;
     margin: 0;
     line-height: 1.6;
     flex-grow: 1;
+    font-size: 15px;
+    opacity: 0.9;
 }
 
 /* Responsive styles for embedded mode */
 @media only screen and (max-width: 850px) {
     .section-value.is-embedded .panel-blocks {
         grid-template-columns: 1fr;
-        /* Stack vertically on mobile */
-        gap: 40px;
+        gap: 80px;
+        /* Increased gap from 40px */
+        max-width: 400px;
+        /* Constrict on mobile too */
     }
 
     .section-value.is-embedded {
-        padding-top: 60px;
-        padding-bottom: 60px;
+        padding-top: 100px;
+        padding-bottom: 200px;
+        /* Increased to make space for footer */
     }
 
     .section-value.is-embedded>.mask>.title {
-        font-size: 50px;
+        font-size: 42px;
     }
 }

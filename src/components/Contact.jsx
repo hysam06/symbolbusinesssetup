@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Contact.css';
-import contactBg from '../assets/pexels-alex-dos-santos-305643819-33077896.jpg';
+import contactBg from '../assets/pexels-alex-andrews-271121-821754.jpg';
 
 const Contact = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <section className="page-contact page" style={{ backgroundImage: `url(${contactBg})` }}>
+        <section className={`page-contact page ${isVisible ? 'has-entered' : ''}`} ref={sectionRef} style={{ backgroundImage: `url(${contactBg})` }}>
             <div className="contact-overlay"></div>
             <div className="contact-container">
                 {/* Left Column: Contact Info */}
@@ -36,7 +57,7 @@ const Contact = () => {
                             </div>
                             <div className="detail-text">
                                 <span className="detail-label">EMAIL</span>
-                                <span className="detail-value">info@getourism.com</span>
+                                <span className="detail-value">symboladv66@gmail.com</span>
                             </div>
                         </div>
 

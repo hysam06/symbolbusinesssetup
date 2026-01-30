@@ -1,0 +1,251 @@
+/* ServiceDetail.css */
+.page-service-detail {
+    min-height: 100vh;
+    background-color: #fff;
+    color: var(--color-dark-purple);
+}
+
+.detail-header {
+    height: 60vh;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Optional parallax feel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.detail-header-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+}
+
+.page-service-detail .detail-label {
+    background: transparent;
+    padding: 5px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.detail-title {
+    font-size: 48px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.detail-content-container {
+    max-width: 1000px;
+    /* Narrower for reading if single col, or keep 1200 */
+    margin: 0 auto;
+    padding: 80px 20px 40px;
+    /* Reduced bottom padding */
+    display: block;
+    /* Remove grid */
+}
+
+.content-wrapper h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content-wrapper h3 {
+    font-size: 24px;
+    margin: 30px 0 15px;
+    color: var(--color-dark-purple);
+}
+
+.content-wrapper ul {
+    padding-left: 20px;
+}
+
+.content-wrapper li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.content-wrapper p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.page-service-detail .subtitle {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* FAQ Styles */
+.faq-section {
+    margin-top: 60px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-dark-purple);
+    /* Blue color from image */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+}
+
+.faq-answer.open {
+    max-height: 500px;
+    /* Increased to allow more content */
+    padding-bottom: 20px;
+}
+
+/* CTA Card */
+.detail-cta-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+}
+
+.cta-card {
+    background-color: #f7f7f7;
+    /* Light grey */
+    color: #000;
+    /* Black text */
+    padding: 60px 40px;
+    border-radius: 0;
+    /* Sharp or slightly rounded? User said "box change colour". keeping rounded */
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    /* Reset sticky */
+    top: auto;
+    border: 1px solid #e0e0e0;
+}
+
+.cta-card h2 {
+    font-size: 36px;
+    /* Larger title for bottom banner */
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #000;
+}
+
+.cta-card p {
+    margin-bottom: 40px;
+    line-height: 1.6;
+    color: #666;
+    /* Grey text */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #000;
+    /* Black button */
+    color: #fff;
+    /* White text */
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid #000;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    background-color: #fff;
+    color: #000;
+}
+
+@media (max-width: 900px) {
+    .detail-content-container {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-right-col {
+        display: none;
+        /* Hide empty col */
+    }
+
+    .cta-card {
+        padding: 40px 20px;
+        margin-top: 40px;
+    }
+
+    .cta-card h2 {
+        font-size: 28px;
+    }
+
+    .detail-title {
+        font-size: 32px;
+    }
+}
+
+/* Animation Initial States */
+.detail-header-content,
+.detail-content-container,
+.detail-cta-container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Has Entered */
+.page-service-detail.has-entered .detail-header-content,
+.page-service-detail.has-entered .detail-content-container,
+.page-service-detail.has-entered .detail-cta-container {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger */
+.page-service-detail.has-entered .detail-header-content {
+    transition-delay: 0.1s;
+}
+
+.page-service-detail.has-entered .detail-content-container {
+    transition-delay: 0.3s;
+}
+
+.page-service-detail.has-entered .detail-cta-container {
+    transition-delay: 0.5s;
+}

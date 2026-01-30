@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Clients.css';
+import AnimatedGridPattern from './AnimatedGridPattern';
 
 // Import local logos
 import logo10 from '../assets/logosss/10.png';
@@ -69,6 +70,16 @@ const Clients = () => {
 
     return (
         <section className={`section-clients ${isVisible ? 'has-entered' : ''}`} ref={sectionRef}>
+            {/* Animated Grid Pattern */}
+            <div className="clients-grid-container">
+                <AnimatedGridPattern
+                    numSquares={30}
+                    maxOpacity={0.15}
+                    duration={3}
+                    repeatDelay={1}
+                    className="clients-grid-pattern"
+                />
+            </div>
             <div className="panel-text">
                 <div className="mask">
                     <h3 className="title">Trusted by Leading Brands</h3>
@@ -102,7 +113,7 @@ const Clients = () => {
                     </div>
                 </div>
 
-                <a href="/mission" className="wp-link button global-button has-fill forward" style={{ borderColor: 'var(--color-dark-purple)', color: 'var(--color-dark-purple)', marginTop: '40px' }}>
+                <a href="/mission" className="wp-link button global-button has-fill forward mission-button">
                     <span>OUR MISSION</span> <span>→</span>
                 </a>
             </div>

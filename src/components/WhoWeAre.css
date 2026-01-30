@@ -47,7 +47,7 @@
     font-weight: 400;
     margin: 0 0 30px 0;
     letter-spacing: -1.2px;
-    color: var(--color-dark-purple);
+    color: #1a1a1a;
     text-align: left;
     width: 100%;
 }
@@ -89,7 +89,7 @@
     font-size: 16px;
     /* Slightly larger for impact */
     line-height: 1.5;
-    color: var(--color-dark-purple);
+    color: #1a1a1a;
     margin-bottom: 40px;
     max-width: 100%;
 }
@@ -98,11 +98,11 @@
 .section-who-we-are .global-button {
     width: fit-content;
     padding: 15px 30px;
-    border: 1px solid var(--color-dark-purple);
+    border: 1px solid #1a1a1a;
     border-radius: 50px;
     /* Pill shape */
     background-color: transparent;
-    color: var(--color-dark-purple);
+    color: #1a1a1a;
     text-decoration: none;
     display: inline-flex;
     align-items: center;

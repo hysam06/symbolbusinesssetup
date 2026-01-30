@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import aboutUsImg from '../assets/about us.jpg';
 import './WhoWeAre.css';
 
@@ -48,9 +49,9 @@ const WhoWeAre = () => {
                         <div className="text">
                             Our expert guidance through complex laws, regulations, and compliance processes to keep your business fully protected. We simplify legal procedures and help you make confident, informed decisions.
                         </div>
-                        <a href="/services" className="wp-link button global-button has-fill forward" style={{ borderColor: 'var(--color-dark-purple)', color: 'var(--color-dark-purple)' }}>
-                            <span>OUR SERVICES</span> <span>→</span>
-                        </a>
+                        <Link to="/team" className="wp-link button global-button has-fill forward" style={{ borderColor: '#1a1a1a', color: '#1a1a1a' }}>
+                            <span>OUR FOUNDER</span> <span>→</span>
+                        </Link>
                     </div>
                 </div>
             </div>

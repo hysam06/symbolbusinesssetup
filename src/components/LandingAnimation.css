@@ -1,0 +1,27 @@
+.landing-animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Mobile: ensured full height and centering */
+    height: 100dvh;
+    background-color: #ffffff;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overscroll-behavior: none;
+    touch-action: none;
+}
+
+/* Desktop Adjustments */
+@media (min-width: 768px) {
+    .landing-animation-container svg {
+        /* Zoom out */
+        transform: scale(0.7);
+        /* Align more up/visually centered - translating y up by 15% */
+        transform-origin: center center;
+        margin-bottom: 10vh;
+        /* Pushes the content up effectively */
+    }
+}

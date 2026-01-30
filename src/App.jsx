@@ -14,8 +14,11 @@ import Team from './components/Team';
 
 import Footer from './components/Footer';
 import LandingAnimation from './components/LandingAnimation';
+import ScrollToTop from './components/ScrollToTop';
 
 import HomeContact from './components/HomeContact'; // New import
+import ServiceDetail from './components/ServiceDetail';
+import ServicesPreview from './components/ServicesPreview';
 
 // ... imports ...
 
@@ -34,6 +37,7 @@ function App() {
 
   return (
     <div className={`layout layout-default main breakpoint-desktop scrolling-up ${getRouteClass(location.pathname)}`}>
+      <ScrollToTop />
       <LandingAnimation />
       <Header />
 
@@ -43,12 +47,14 @@ function App() {
             <Hero />
             <WhoWeAre />
             <Clients />
+            <ServicesPreview />
             <HomeContact /> {/* Replaced ValueProposition */}
             <Footer />
           </div>
         } />
         <Route path="/contact" element={<><Contact /><Footer /></>} />
         <Route path="/services" element={<><Services /><Footer /></>} />
+        <Route path="/services/:id" element={<><ServiceDetail /><Footer /></>} />
         <Route path="/mission" element={<><Mission /><Footer /></>} /> {/* Added ValueProposition here */}
         <Route path="/team" element={<><Team /><Footer /></>} />
       </Routes>

@@ -26,10 +26,7 @@ body {
   overscroll-behavior-y: none
 }
 
-::selection {
-  color: var(--color-white);
-  background: var(--color-orange)
-}
+
 
 h1,
 h2,
@@ -314,11 +311,11 @@ button {
   --color-white: #fff;
   --color-black: #000;
   --color-orange: #f50;
-  --color-dark-purple: #2f1d34;
-  --color-violet: #52345b;
+  --color-dark-purple: #222222;
+  --color-violet: #888888;
   --color-grey: #f7f4f3;
   --color-royal-red: #A41034;
-  --color-raisin: 251729;
+  --color-raisin: #222222;
   --unit-100vh: 100vh;
   --unit-gap: 45px;
   --unit-max-width: 1800px;

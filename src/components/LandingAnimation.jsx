@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { useLocation } from 'react-router-dom';
+import './LandingAnimation.css';
 
 // The SVG provided by the user, split into data for easier usage
 const LOGO_PATHS = [
@@ -177,13 +178,7 @@ const LandingAnimation = () => {
     if (!isVisible) return null;
 
     return (
-        <div ref={containerRef} style={{
-            position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-            width: '100%', height: '100dvh',
-            backgroundColor: '#ffffff', zIndex: 99999,
-            display: 'flex', justifyContent: 'center', alignItems: 'center',
-            overscrollBehavior: 'none', touchAction: 'none'
-        }}>
+        <div ref={containerRef} className="landing-animation-container">
             <svg width="321" height="328" viewBox="0 0 321 328" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="real-paths">
                     {LOGO_PATHS.map((p, i) => (

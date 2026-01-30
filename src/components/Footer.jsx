@@ -26,11 +26,11 @@ const Footer = () => {
         <div className={`global-footer black ${isVisible ? 'has-entered' : ''}`} ref={sectionRef}>
             <div className="line"></div>
             <a aria-current="page" className="title mobile-only exact-active-link active-link" href="/">
-                <img src={symbolLogo} alt="Actionist" className="svg" style={{ height: '66.2px', width: 'auto' }} />
+                <img src={symbolLogo} alt="Actionist" className="svg" style={{ height: '132.4px', width: 'auto' }} />
             </a>
             <div className="meta">
                 <a aria-current="page" className="title desktop-only exact-active-link active-link" href="/">
-                    <img src={symbolLogo} alt="Actionist" className="svg" style={{ height: '66.2px', width: 'auto' }} />
+                    <img src={symbolLogo} alt="Actionist" className="svg" style={{ height: '132.4px', width: 'auto' }} />
                 </a>
                 <div className="column">
                     <div className="column-title">Find Us</div>
@@ -48,11 +48,11 @@ const Footer = () => {
                     <div className="icons-socials">
                         <a className="svg-link" href="https://www.linkedin.com/company/actionist-consulting" target="_blank" rel="noreferrer">
                             <svg baseProfile="basic" height="35.2" viewBox="0 0 35.2 35.2" width="35.2" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.6 0C7.9 0 0 7.9 0 17.6s7.9 17.6 17.6 17.6c9.7 0 17.6-7.9 17.6-17.6C35.2 7.9 27.3 0 17.6 0zm-3.8 25.2h-3.7V14.1h3.7v11.1zm-1.7-12.5c-1.3 0-2.3-1-2.3-2.3 0-1.3 1-2.3 2.3-2.3 1.3 0 2.3 1 2.3 2.3 0 1.3-1 2.3-2.3 2.3zm15 12.5h-3.7v-5.9c0-1.5-.5-2.5-1.9-2.5-.9 0-1.6.5-1.9 1.4-.1.3-.1.6-.1.9v6.2H16V14.2h3.5v1.3c.7-1.1 2-1.7 3.3-1.6 2.4 0 4.3 1.6 4.3 5v6.3z" fill="#2F1D34"></path>
+                                <path d="M17.6 0C7.9 0 0 7.9 0 17.6s7.9 17.6 17.6 17.6c9.7 0 17.6-7.9 17.6-17.6C35.2 7.9 27.3 0 17.6 0zm-3.8 25.2h-3.7V14.1h3.7v11.1zm-1.7-12.5c-1.3 0-2.3-1-2.3-2.3 0-1.3 1-2.3 2.3-2.3 1.3 0 2.3 1 2.3 2.3 0 1.3-1 2.3-2.3 2.3zm15 12.5h-3.7v-5.9c0-1.5-.5-2.5-1.9-2.5-.9 0-1.6.5-1.9 1.4-.1.3-.1.6-.1.9v6.2H16V14.2h3.5v1.3c.7-1.1 2-1.7 3.3-1.6 2.4 0 4.3 1.6 4.3 5v6.3z" fill="#222222"></path>
                             </svg>
                         </a>
                     </div>
-                    <p className="copyright"> © Copyright 2026<br />Actionist Consulting</p>
+                    <p className="copyright"> © Copyright 2026<br />Symbol advertising</p>
                 </div>
             </div>
         </div>

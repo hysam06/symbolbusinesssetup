@@ -4,10 +4,9 @@
     margin: 0 auto;
     min-height: var(--unit-100vh);
     position: relative;
-    /* Use a light grey background color */
-    background-color: #f2f2f2;
+    background-color: #1a1a1a;
+    /* Updated to dark grey */
     overflow: hidden;
-    /* Ensure grid doesn't spill out */
 }
 
 /* Container for the grid to stay fixed or absolute */
@@ -23,141 +22,59 @@
 
 .mission-grid-pattern {
     color: var(--color-white);
-    /* Grid color */
-    opacity: 0.5;
-}
-
-/* Adjust overlay if needed, or keep it to darken everything further */
-.mission-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Gradient overlay for better text readability */
-    /* Gradient overlay for light mode - keep it subtle or remove */
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
-    z-index: 1;
-    pointer-events: none;
-}
-
-
-
-/* Grid Mission (Alternating Sections) */
-.section-mission {
-    position: relative;
-    box-sizing: border-box;
-    height: 75vh;
-    display: flex;
-    overflow: hidden;
-    background-color: var(--color-white);
-}
-
-.section-mission:nth-child(2n) {
-    flex-direction: row-reverse;
-    padding-top: 50px;
-}
-
-.section-mission .image {
-    max-width: 50%;
-    overflow: hidden;
-    margin: 0;
-    width: 100%;
-}
-
-.section-mission .image .media {
-    transform: scale(1.25);
-    transition: transform .8s var(--easing-authentic-motion);
-}
-
-.section-mission:nth-of-type(2n) .image {
-    border-radius: 100px 0 0 0;
-}
-
-.section-mission .panel-text {
-    padding: 20px;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.section-mission .text,
-.section-mission .title {
-    max-width: 550px;
-    color: var(--color-dark-purple);
-}
-
-.section-mission .title {
-    margin: 0 auto 10px;
-    font-size: 24px;
-    line-height: 1.3;
-    transform: translateY(125%);
-    transition: transform 1s var(--easing-authentic-motion);
-    font-weight: 400;
-}
-
-.section-mission .text {
-    font-size: 16px;
-    font-weight: 200;
-    line-height: 1.4;
-    transform: translateY(100%);
-    transition: transform 1s var(--easing-authentic-motion) .2s;
-    color: var(--color-violet);
-}
-
-.section-mission.has-entered .text,
-.section-mission.has-entered .title {
-    transform: translate(0);
-}
-
-.section-mission.has-entered .image .media {
-    transform: scale(1);
+    opacity: 0.15;
 }
 
 /* Value Prop Section */
 .section-value-prop {
-    padding: 60px 0 100px;
-    color: var(--color-dark-purple);
-    background-color: var(--color-white);
+    padding: 0 0 100px;
+    margin-top: -50px;
+    color: var(--color-white);
+    background-color: transparent;
 }
 
+/* Matching Services Page Header Style */
 .section-value-prop .title {
     margin: 0 0 60px;
     line-height: 1.2;
     text-align: center;
-    font-size: 80px;
-    font-weight: 400;
+    font-size: 56px;
+    /* Matched from Services page */
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 
 .section-value-prop .block {
     margin: 0 0 60px;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
+    /* Centered content */
+}
+
+/* Smaller content box */
+.section-value-prop .panel-text {
+    max-width: 320px;
+    /* Smaller width */
+    padding-left: 60px;
+    /* Reduced padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .section-value-prop .image {
-    max-width: 640px;
+    max-width: 500px;
+    /* Slightly reduced image constraint for better proportion with smaller text box */
     transform: translate(-100%);
     transition: transform .6s var(--easing-authentic-motion);
     margin: 0;
     width: 100%;
 }
 
-.section-value-prop .panel-text {
-    max-width: 390px;
-    padding-left: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .section-value-prop .panel-text .number {
-    font-size: 80px;
+    font-size: 60px;
+    /* Adjusted to fit smaller box */
     transform: translateY(50%);
 }
 
@@ -170,17 +87,17 @@
 .section-value-prop .panel-text .title {
     margin: 15px 0;
     padding: 0;
-    font-size: 24px;
+    font-size: 22px;
     text-align: left;
     transform: translateY(100%);
 }
 
 .section-value-prop .panel-text .text {
     margin: 0;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5;
     font-weight: 200;
-    color: var(--color-violet);
+    color: var(--color-white);
     opacity: 0;
     transform: translateY(50%);
     transition: transform .6s var(--easing-authentic-motion), opacity .6s var(--easing-authentic-motion);
@@ -229,7 +146,8 @@
     align-content: stretch;
     align-items: center;
     color: var(--color-grey);
-    background-color: var(--color-dark-purple);
+    background-color: #1a1a1a;
+    /* Consistency updated */
 }
 
 .section-collaboration .panel-top {
@@ -353,8 +271,9 @@
 .section-collaboration .block-text {
     display: flex;
     flex-direction: column;
-    max-width: 330px;
-    padding: 70px 80px;
+    max-width: 300px;
+    /* Constricted width closer to request */
+    padding: 50px 40px;
     opacity: 0;
     transform: translateY(50%);
     transition: transform .6s var(--easing-authentic-motion), opacity .6s var(--easing-authentic-motion);
@@ -404,21 +323,17 @@
 @media only screen and (min-width: 1800px) {
 
     /* Large screens adjustments */
-    .section-mission .title {
-        font-size: 35px;
-        margin-bottom: 15px;
-    }
-
     .section-value-prop {
         padding-bottom: 100px;
     }
 
     .section-value-prop .title {
-        font-size: 120px;
+        font-size: 80px;
+        margin-bottom: 40px;
     }
 
     .section-value-prop .image {
-        max-width: 920px;
+        max-width: 720px;
     }
 
     .section-value-prop .block {
@@ -426,21 +341,21 @@
     }
 
     .section-value-prop .panel-text {
-        max-width: 560px;
-        padding-left: 150px;
+        max-width: 440px;
+        padding-left: 100px;
     }
 
     .section-value-prop .panel-text .number {
-        font-size: 115px;
+        font-size: 90px;
     }
 
     .section-value-prop .panel-text .title {
-        font-size: 35px;
+        font-size: 30px;
     }
 
     .section-collaboration .block-text {
-        padding: 70px 150px 130px;
-        max-width: 380px;
+        padding: 70px 100px 130px;
+        max-width: 350px;
     }
 
     .section-collaboration .image {
@@ -463,16 +378,8 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .section-mission .title {
-        font-size: 22px;
-    }
-
-    .section-mission .text {
-        font-size: 14px;
-    }
-
     .section-value-prop .title {
-        font-size: 60px;
+        font-size: 42px;
     }
 
     .section-value-prop .image {
@@ -480,12 +387,12 @@
     }
 
     .section-value-prop .panel-text {
-        max-width: 360px;
-        padding-left: 85px;
+        max-width: 300px;
+        padding-left: 40px;
     }
 
     .section-value-prop .panel-text .title {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .section-value-prop .panel-text .text {
@@ -518,37 +425,6 @@
 }
 
 @media only screen and (max-width: 850px) {
-    .section-mission {
-        padding-bottom: 0;
-        flex-direction: column;
-        min-height: max-content;
-        height: 100%;
-    }
-
-    .section-mission:nth-child(2n) {
-        padding-top: 0;
-        flex-direction: column;
-    }
-
-    .section-mission .image {
-        max-width: 100%;
-        max-height: 50vh;
-    }
-
-    .section-mission .panel-text {
-        padding: 30px 20px;
-        max-width: 100%;
-    }
-
-    .section-mission .title {
-        font-size: 24px;
-    }
-
-    .section-mission .text {
-        margin: 10px 0 0;
-        line-height: 1.6;
-    }
-
     .section-value-prop {
         margin-top: 0;
         padding-top: 0;
@@ -558,7 +434,7 @@
         max-width: 355px;
         padding-left: 20px;
         margin-bottom: 30px;
-        font-size: 50px;
+        font-size: 42px;
         text-align: left;
     }
 
@@ -568,7 +444,8 @@
     }
 
     .section-value-prop .block {
-        margin-bottom: 30px;
+        margin-bottom: 60px;
+        /* Increased from 30px */
         padding-right: 20px;
         display: flex;
         flex-direction: column;
@@ -580,7 +457,8 @@
     }
 
     .section-collaboration {
-        padding: 30px 0 60px;
+        padding: 30px 0 200px;
+        /* Increased bottom padding for footer separation */
     }
 
     .section-collaboration .title-top .prefix {
@@ -616,7 +494,8 @@
 
     .section-collaboration .block-text {
         padding: 0;
-        margin-bottom: 30px;
+        margin-bottom: 60px;
+        /* Increased from 30px */
         max-width: 100%;
         width: 100%;
     }

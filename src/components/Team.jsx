@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Team.css';
-import teamBg from '../assets/pexels-tima-miroshnichenko-5710948.jpg';
+
+import './Team.css';
+import DotPattern from './DotPattern';
+
+// import teamBg from '../assets/pexels-alex-dos-santos-305643819-33077896.jpg';
 import founderImg from '../assets/our founder.jpeg';
 
 const Team = () => {
@@ -26,8 +30,17 @@ const Team = () => {
     }, []);
 
     return (
-        <section className={`page-team page ${isVisible ? 'has-entered' : ''}`} ref={sectionRef} style={{ backgroundImage: `url(${teamBg})` }}>
-            <div className="team-overlay"></div>
+        <section className={`page-team page ${isVisible ? 'has-entered' : ''}`} ref={sectionRef}>
+            <DotPattern
+                width={20}
+                height={20}
+                cx={1}
+                cy={1}
+                cr={1}
+                className="team-dot-pattern"
+                style={{ color: 'rgba(255, 255, 255, 0.2)' }}
+            />
+            {/* <div className="team-overlay"></div> */}
 
             <div className="founder-section">
                 <div className="founder-container">

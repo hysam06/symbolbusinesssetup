@@ -1,16 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './Hero.css';
 import heroVideo from '../assets/symbol bg video.mp4';
 
 const Hero = () => {
-    const [mounted, setMounted] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
 
     useEffect(() => {
-        setMounted(true);
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => observer.disconnect();
     }, []);
 
     return (
-        <div className={`intro-home ${mounted ? 'intro-is-complete' : ''}`}>
+        <div className={`intro-home ${isVisible ? 'has-entered' : ''}`} ref={sectionRef}>
             <figure className="image wp-image mode-cover has-background-color is-orientation-landscape object-fit-cover">
                 <video
                     className="media media-video"
