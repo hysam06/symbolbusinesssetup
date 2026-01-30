@@ -5,6 +5,7 @@ import heroVideo from '../assets/symbol bg video.mp4';
 const Hero = () => {
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef(null);
+    const videoRef = useRef(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -24,15 +25,30 @@ const Hero = () => {
         return () => observer.disconnect();
     }, []);
 
+    // Ensure video plays on Safari
+    useEffect(() => {
+        if (videoRef.current) {
+            const playPromise = videoRef.current.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    // Auto-play was prevented, but we have muted and playsInline
+                    console.log('Video autoplay prevented:', error);
+                });
+            }
+        }
+    }, []);
+
     return (
         <div className={`intro-home ${isVisible ? 'has-entered' : ''}`} ref={sectionRef}>
             <figure className="image wp-image mode-cover has-background-color is-orientation-landscape object-fit-cover">
                 <video
+                    ref={videoRef}
                     className="media media-video"
                     autoPlay
                     loop
                     muted
                     playsInline
+                    preload="auto"
                     src={heroVideo}
                 ></video>
                 <div className="sizer"></div>

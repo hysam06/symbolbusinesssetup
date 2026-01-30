@@ -292,7 +292,7 @@
     /* Aligned with Logo vertical center (approx 50px) */
     background: transparent;
     border: none;
-    color: #000000;
+    color: #808080;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -311,7 +311,7 @@
 
 /* Menu button color states */
 .header-floating.state-top .button-menu {
-    color: #000000;
+    color: #808080;
 }
 
 /* Team Page - Specific Override for visibility on dark bg */
@@ -320,7 +320,7 @@
 }
 
 .header-floating.state-float .button-menu {
-    color: #000000;
+    color: #808080;
 }
 
 .button-menu.is-open {

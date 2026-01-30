@@ -3,8 +3,13 @@
     top: 0;
     left: 0;
     width: 100vw;
+    width: 100dvw;
     /* Mobile: ensured full height and centering */
+    height: 100vh;
     height: 100dvh;
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
     background-color: #ffffff;
     z-index: 99999;
     display: flex;
@@ -12,6 +17,14 @@
     align-items: center;
     overscroll-behavior: none;
     touch-action: none;
+    overflow: hidden;
+}
+
+/* iOS Safari specific fix */
+@supports (-webkit-touch-callout: none) {
+    .landing-animation-container {
+        height: -webkit-fill-available;
+    }
 }
 
 /* Desktop Adjustments */
