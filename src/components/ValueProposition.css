@@ -1,0 +1,383 @@
+.section-value {
+    padding: 30px 80px 30px 150px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Original alignment */
+    background-color: #f7f4f3;
+    overflow: hidden;
+}
+
+.section-value .mask {
+    overflow: hidden;
+    text-align: left;
+    /* Ensure left alignment */
+}
+
+.section-value .title {
+    line-height: 1.2;
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    color: var(--color-dark-purple);
+    padding: 0;
+    margin: 0 0 60px;
+    transform: translateY(200%);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-value .panel-blocks {
+    gap: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+}
+
+.section-value .panel-button {
+    width: 100%;
+    margin: 80px 0 0;
+    text-align: center;
+}
+
+/* Button Styling & Animation */
+.section-value .global-button {
+    width: fit-content;
+    padding: 15px 30px;
+    border: 1px solid var(--color-dark-purple);
+    border-radius: 50px;
+    /* Pill shape */
+    background-color: transparent;
+    color: var(--color-dark-purple);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Initial state of internal spans */
+.section-value .global-button span {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect */
+.section-value .global-button:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.section-value .global-button:hover span {
+    color: white;
+}
+
+/* Animations */
+.section-value.has-entered .title,
+.section-value.has-entered .block-value .mask .title,
+.section-value.has-entered .block-value .mask .text {
+    transform: translateY(0);
+}
+
+.block-value {
+    display: flex;
+    flex-direction: column;
+}
+
+.block-value .title {
+    font-size: 24px;
+    margin: 25px 0 15px;
+    font-weight: 400;
+    line-height: 1.2;
+    transform: translateY(200%);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    color: var(--color-dark-purple);
+}
+
+.block-value .text {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 200;
+    transform: translateY(200%);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+    color: var(--color-violet);
+    /* Original uses violet? index.html says text color matches */
+}
+
+/* Wait, index.html line 31: .block-value .text { color: var(--color-violet) ... } - No, wait, checking text color variable.
+   Default text class is violet.
+*/
+
+.block-value figure {
+    margin: 0;
+    transform: scale(0.5);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    position: relative;
+    width: 50%;
+    aspect-ratio: 3 / 4;
+    /* Maintain portrait aspect ratio but cropped */
+    overflow: hidden;
+}
+
+.block-value figure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.section-value.has-entered .block-value figure {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.block-value:nth-child(1) figure {
+    align-self: flex-start;
+}
+
+.block-value:nth-child(2) figure {
+    align-self: center;
+    /* Center align 2nd image as requested */
+    width: 70%;
+    /* "Little bit wider" */
+}
+
+.block-value:nth-child(3) figure {
+    align-self: flex-start;
+}
+
+/* Specific delays or stagger could be added if needed, but original uses consistent delay? 
+   Original: .block-value .image ... transition ... opacity 0.6s ... 
+*/
+
+@media only screen and (min-width: 1800px) {
+    .section-value {
+        padding-top: 80px;
+    }
+
+    .section-value .title {
+        margin: 80px 0;
+        letter-spacing: -1.2px;
+        line-height: 0.8;
+        font-size: 120px;
+    }
+
+    .section-value .panel-button {
+        margin-bottom: 60px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .section-value {
+        padding: 0 40px 0 140px;
+    }
+
+    .section-value .title {
+        margin: 40px 0;
+        letter-spacing: -0.6px;
+        font-size: 60px;
+    }
+
+    .section-value .panel-blocks {
+        gap: 40px;
+    }
+
+    .block-value .title {
+        font-size: 22px;
+        margin: 25px 0;
+        line-height: 1.3;
+    }
+
+    .block-value .text {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .section-value {
+        padding: 0 20px;
+        align-items: flex-start;
+    }
+
+    .section-value .title {
+        margin: 30px 0;
+        letter-spacing: -0.5px;
+        font-size: 50px;
+        padding: 0;
+    }
+
+    .section-value .panel-blocks {
+        gap: 0;
+        margin-bottom: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .block-value {
+        margin-bottom: 40px;
+    }
+
+    .block-value:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Center the first image on mobile as requested and make full visible */
+    .block-value:nth-child(1) figure {
+        align-self: center;
+        aspect-ratio: auto;
+        width: 80%;
+        height: auto;
+    }
+
+    .block-value:nth-child(1) figure img {
+        height: auto;
+        position: relative;
+    }
+
+    /* Center the second image and make it fully visible (no crop) on mobile */
+    .block-value:nth-child(2) figure {
+        align-self: center;
+        aspect-ratio: auto;
+        /* Reset aspect ratio to verify text */
+        width: 80%;
+        /* Adjust width to be smaller/contained */
+        height: auto;
+    }
+
+    .block-value:nth-child(2) figure img {
+        height: auto;
+        position: relative;
+        /* Override absolute positioning if needed, but container aspect-ratio auto might break absolute img.. check styles */
+    }
+
+    /* Center the third image on mobile and make fully visible */
+    .block-value:nth-child(3) figure {
+        align-self: center;
+        aspect-ratio: auto;
+        width: 80%;
+        height: auto;
+    }
+
+    .block-value:nth-child(3) figure img {
+        height: auto;
+        position: relative;
+    }
+
+    .section-value .panel-button {
+        margin: 30px 0 60px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Embedded State for Mission Page */
+
+/* Embedded State for Mission Page */
+.section-value.is-embedded {
+    background-color: transparent;
+    padding-top: 200px;
+    padding-bottom: 100px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Force standard grid behavior in embedded mode */
+.section-value.is-embedded .panel-blocks {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    /* Standardize gap */
+    align-items: stretch;
+    /* Stretch items to same height */
+}
+
+/* Standardize individual blocks with hover interaction */
+.section-value.is-embedded .block-value {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    /* Card background */
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+    /* Prepare for border */
+}
+
+.section-value.is-embedded .block-value:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Reset any specific widths or offsets from original CSS */
+.section-value.is-embedded .block-value figure {
+    width: 100% !important;
+    max-width: none !important;
+    align-self: flex-start !important;
+    aspect-ratio: 16 / 9 !important;
+    /* Force standard 16:9 ratio */
+    margin: 0 0 20px 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Update main title color in embedded mode */
+.section-value.is-embedded>.mask>.title {
+    color: var(--color-dark-purple);
+    /* Dark color for light mode */
+    text-shadow: none;
+    font-size: 100px;
+}
+
+/* Style for text blocks inside embedded mode */
+.section-value.is-embedded .block-value .title {
+    color: var(--color-dark-purple);
+    /* Dark color */
+    /* Removed box background styles */
+    padding: 0;
+    margin: 0 0 15px 0;
+    width: 100%;
+    text-align: left;
+    /* Align left like minimal style */
+}
+
+.section-value.is-embedded .block-value .text {
+    color: var(--color-violet);
+    /* standard text color */
+    /* Removed box background styles */
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+/* Responsive styles for embedded mode */
+@media only screen and (max-width: 850px) {
+    .section-value.is-embedded .panel-blocks {
+        grid-template-columns: 1fr;
+        /* Stack vertically on mobile */
+        gap: 40px;
+    }
+
+    .section-value.is-embedded {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .section-value.is-embedded>.mask>.title {
+        font-size: 50px;
+    }
+}

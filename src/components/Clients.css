@@ -1,0 +1,307 @@
+.section-clients {
+    margin: 0 auto;
+    padding: 70px 40px 60px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    max-width: 1600px;
+    width: 100%;
+    /* Ensure text can be positioned relative if needed, but mainly for the flow */
+    background-color: transparent;
+    /* Reset background */
+}
+
+.section-clients .panel-text {
+    padding-left: 0;
+    /* Original is left aligned */
+    max-width: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section-clients .title {
+    line-height: 1;
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    padding: 0;
+    margin: 0 0 20px;
+    transform: translateY(200%);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--color-dark-purple);
+}
+
+.section-clients .mask {
+    overflow: hidden;
+}
+
+.section-clients .title-line {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-violet);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
+.section-clients.has-entered .title {
+    transform: translateY(0);
+}
+
+.section-clients .trust-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+    background-color: #f7f7f9;
+    padding: 15px 30px;
+    border-radius: 50px;
+}
+
+.section-clients .badge-icon svg {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.section-clients .badge-text strong {
+    display: block;
+    font-size: 18px;
+    color: var(--color-dark-purple);
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.section-clients .badge-text p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--color-violet);
+    font-weight: 300;
+}
+
+@media only screen and (max-width: 850px) {
+    .section-clients .trust-badge {
+        flex-direction: column;
+        text-align: center;
+        border-radius: 20px;
+        padding: 20px;
+    }
+}
+
+.section-clients .logo {
+    width: 200px;
+    height: auto;
+    padding-right: 200px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.section-clients .logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section-clients .effect-marquee {
+    margin: 60px 0 80px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.section-clients .effect-marquee .items {
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    position: relative;
+    animation-name: scroll-animation;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: var(--direction);
+    animation-duration: var(--duration);
+}
+
+.section-clients .effect-marquee .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+@keyframes scroll-animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+@media only screen and (min-width: 1800px) {
+    .section-clients .title {
+        margin: 0 0 60px;
+        letter-spacing: -1.2px;
+        line-height: 0.8;
+        font-size: 80px;
+    }
+
+    .section-clients .text {
+        max-width: 470px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .section-clients .title {
+        margin: 0 0 40px;
+        letter-spacing: -0.6px;
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .section-clients {
+        padding: 40px 0;
+    }
+
+    .section-clients .panel-text {
+        padding: 0 20px;
+    }
+
+    .section-clients .title {
+        margin: 0 0 30px;
+        letter-spacing: -0.5px;
+        font-size: 32px;
+        padding: 0;
+    }
+
+    .section-clients .text {
+        max-width: 100%;
+    }
+
+    /* Mobile Marquee Styles - Animation Restored */
+    .section-clients .effect-marquee {
+        margin: 40px 0;
+        width: 100%;
+        overflow: hidden;
+        /* Hide overflow for marquee */
+        display: flex;
+        /* Ensure it's a flex container */
+    }
+
+    .section-clients .effect-marquee .items {
+        display: flex;
+        animation: scroll-animation 40s linear infinite !important;
+        /* Force enable animation */
+        gap: 0;
+        padding: 0;
+        width: max-content;
+    }
+
+    .section-clients .effect-marquee .content {
+        display: flex;
+        /* Restore flex */
+    }
+
+    .section-clients .logo {
+        width: 140px;
+        /* Adjusted size for mobile */
+        max-width: none;
+        padding-right: 40px;
+        /* Add spacing between logos */
+        margin-right: 0;
+        scroll-snap-align: none;
+        flex-shrink: 0;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-clients .logo img {
+        max-height: 80%;
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+/* Entrance Animations */
+.section-clients .logo {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-clients.has-entered .logo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays can be added via nth-child if needed, or just let them all flow in together naturally as the section becomes visible is usually "soft" enough. 
+   Adding a slight stagger usually looks better. */
+.section-clients.has-entered .logo:nth-child(2n) {
+    transition-delay: 0.1s;
+}
+
+.section-clients.has-entered .logo:nth-child(3n) {
+    transition-delay: 0.2s;
+}
+
+.section-clients.has-entered .logo:nth-child(4n) {
+    transition-delay: 0.3s;
+}
+
+.section-clients.has-entered .logo:nth-child(5n) {
+    transition-delay: 0.4s;
+}
+
+/* Button Styling & Animation */
+.section-clients .global-button {
+    width: fit-content;
+    padding: 15px 30px;
+    border: 1px solid var(--color-dark-purple);
+    border-radius: 50px;
+    background-color: transparent;
+    color: var(--color-dark-purple);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-clients .global-button span {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.section-clients .global-button:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.section-clients .global-button:hover span {
+    color: white;
+}

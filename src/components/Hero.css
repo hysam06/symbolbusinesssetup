@@ -1,0 +1,61 @@
+.intro-home {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-home figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    margin: 0;
+    /* Fix white gaps */
+    padding: 0;
+}
+
+.intro-home figure .media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-home .text {
+    position: relative;
+    z-index: 10;
+    color: var(--color-white);
+    font-size: 3rem;
+    text-align: center;
+    max-width: 800px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.intro-home.intro-is-complete .text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.intro-home .scrim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .intro-home .text {
+        font-size: 2rem;
+        padding: 0 20px;
+    }
+}

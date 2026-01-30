@@ -1,0 +1,393 @@
+/* Header Container */
+.header-floating {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 90px;
+    /* Default height */
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: translateY(0);
+}
+
+/* States */
+.header-floating.state-top {
+    transform: translateY(0);
+    height: 90px;
+}
+
+.header-floating.state-off {
+    transform: translateY(-100%);
+}
+
+.header-floating.state-float {
+    transform: translateY(0);
+}
+
+/* Child Elements logic based on state */
+.header-floating .color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 0;
+    transform: translateY(-100%);
+    /* Default hidden/up */
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.header-floating .hotspot {
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    display: block;
+}
+
+/* State modifications to children */
+.header-floating.state-top .color {
+    transform: translateY(-100%);
+}
+
+.header-floating.state-top .hotspot {
+    display: none;
+}
+
+/* White text/logo at the top (transparent background) */
+.header-floating.state-top .global-menu .menu-link {
+    color: var(--color-white, #ffffff);
+}
+
+.header-floating.state-top .global-menu .menu-link:before {
+    background-color: var(--color-white, #ffffff);
+}
+
+.header-floating.state-top .header-logo .svg path {
+    fill: var(--color-white, #ffffff);
+}
+
+.header-floating.state-float .color {
+    transform: translateY(0);
+    /* Background visible */
+}
+
+.header-floating.state-float .hotspot {
+    display: none;
+}
+
+/* Dark text/logo when floating (white background) */
+.header-floating.state-float .global-menu .menu-link {
+    color: var(--color-dark-purple, #2f1d34);
+}
+
+.header-floating.state-float .global-menu .menu-link:before {
+    background-color: var(--color-dark-purple, #2f1d34);
+}
+
+.header-floating.state-float .header-logo .svg path {
+    fill: var(--color-dark-purple, #2f1d34);
+}
+
+.header-floating.intro-is-active {
+    transform: translateY(-100%);
+    /* Hidden during intro if needed */
+}
+
+
+/* Logo Styles */
+.header-logo {
+    position: relative;
+    display: block;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.header-logo.intro-is-active {
+    opacity: 0;
+}
+
+.header-logo .svg {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 40px;
+    top: -25px;
+    padding: 0 0 0 0;
+    z-index: 900;
+}
+
+.header-logo .svg path {
+    fill: var(--color-dark-purple, #2f1d34);
+    transition: fill 0.4s ease;
+}
+
+/* Menu Styles */
+.global-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 800;
+    padding: 47px 40px 40px;
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    /* Force horizontal */
+    gap: 0;
+}
+
+.global-menu .menu-item {
+    display: block;
+    /* Flex item */
+}
+
+.global-menu .menu-link {
+    position: relative;
+    display: block;
+    margin-right: 70px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--color-dark-purple, #2f1d34);
+    /* Ensure visibility */
+    opacity: 0.6;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: color 0.4s ease, opacity 0.4s ease;
+}
+
+.global-menu .menu-item:last-of-type .menu-link {
+    margin-right: 0;
+}
+
+.global-menu .menu-link:hover {
+    opacity: 1;
+}
+
+/* Indicators */
+.global-menu .menu-link:before {
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: "";
+    opacity: 0;
+    transform: translateY(100%);
+    background-color: var(--color-dark-purple, #2f1d34);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.global-menu .menu-link:hover:before {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+@media (max-width: 850px) {
+    .header-floating {
+        height: 100px;
+        /* Increased height for larger logo */
+    }
+
+    .global-menu {
+        display: none;
+        /* Hidden on mobile - using hamburger menu instead */
+    }
+
+    .global-menu .menu-link {
+        margin-right: 0;
+        /* Use gap instead */
+        font-size: 11px;
+        /* Smaller font to fit */
+        font-weight: 700;
+        /* Bold to maintain visibility */
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        opacity: 0.9;
+    }
+
+    .header-logo .svg {
+        display: block;
+        /* Show logo */
+        height: 75px !important;
+        /* Bigger logo */
+        left: 15px;
+        /* Reduced left space */
+        top: 12px;
+        /* Moved up slightly */
+        max-width: 220px;
+        /* Allow width to grow */
+    }
+}
+
+@media (min-width: 1800px) {
+    .global-menu {
+        padding-right: 80px;
+    }
+
+    .header-logo .svg {
+        left: 115px;
+    }
+}
+
+/* Services Page Specific Overrides */
+/* Services Page Specific Overrides */
+.route-services .header-floating.state-top .global-menu .menu-link {
+    color: #000000;
+}
+
+.route-services .header-floating.state-top .global-menu .menu-link:before {
+    background-color: #000000;
+}
+
+.route-services .header-floating.state-top .button-menu {
+    color: #000000;
+}
+
+/* Contact Page Navbar Overrides */
+.route-contact .header-floating.state-top .global-menu .menu-link {
+    color: #000000;
+}
+
+.route-contact .header-floating.state-top .global-menu .menu-link:before {
+    background-color: #000000;
+}
+
+.route-contact .header-floating.state-top .button-menu {
+    color: #000000;
+}
+
+/* Mobile Menu Button */
+.button-menu {
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2000;
+    padding: 38px 20px 30px;
+    /* Aligned with Logo vertical center (approx 50px) */
+    background: transparent;
+    border: none;
+    color: #000000;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.button-menu .svg {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.button-menu .text {
+    display: none;
+}
+
+.button-menu.is-open .svg {
+    color: var(--color-dark-purple, #2f1d34);
+}
+
+/* Menu button color states */
+.header-floating.state-top .button-menu {
+    color: #000000;
+}
+
+/* Team Page - Specific Override for visibility on dark bg */
+.route-team .header-floating.state-top .button-menu {
+    color: var(--color-white, #ffffff) !important;
+}
+
+.header-floating.state-float .button-menu {
+    color: #000000;
+}
+
+.button-menu.is-open {
+    color: var(--color-dark-purple, #2f1d34);
+    z-index: 1100;
+}
+
+/* Mobile Menu Panel */
+.panel-menu {
+    height: 100vh;
+    height: 100dvh;
+    width: 50%;
+    /* Cover half the screen */
+    background-color: #ffffff;
+    opacity: 1;
+    /* 100% opacity */
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* Align to right */
+    left: auto;
+    /* Remove left align */
+    z-index: 1000;
+    transform: translateX(100%);
+    /* Start off-screen right */
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Align buttons in center */
+    text-align: center;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for depth */
+}
+
+.panel-menu .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    /* Ensure centering works */
+}
+
+.panel-menu .menu-item {
+    margin-bottom: 30px;
+}
+
+.panel-menu .menu-item:last-of-type {
+    margin-bottom: 0;
+}
+
+.panel-menu .menu-link {
+    font-size: 28px;
+    /* Adjusted font size for 50% width container */
+    line-height: 1.15;
+    color: var(--color-dark-purple, #2f1d34);
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+    /* Ensure high visibility */
+}
+
+.panel-menu .menu-link:hover {
+    color: var(--color-orange, #f50);
+}
+
+.panel-menu.menu-is-open {
+    transform: translateX(0);
+    /* Slide in to view */
+}
+
+@media (max-width: 850px) {
+    .button-menu {
+        display: block;
+    }
+
+    .global-menu {
+        display: none;
+    }
+}
