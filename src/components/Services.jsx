@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Services.css';
-import servicesBg from '../assets/pexels-tima-miroshnichenko-5717562.jpg';
+import { getCloudinaryUrl } from '../utils/cloudinary';
 import { serviceData } from '../data/serviceData';
+
+const servicesBg = getCloudinaryUrl('backgrounds/services-bg', { width: 1920, height: 1080 });
 
 import CategorySelect from './CategorySelect';
 

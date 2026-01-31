@@ -1,49 +1,45 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Clients.css';
 import AnimatedGridPattern from './AnimatedGridPattern';
+import { getCloudinaryUrl } from '../utils/cloudinary';
 
-// Import local logos
-import logo10 from '../assets/logosss/10.png';
-import logo11 from '../assets/logosss/11.png';
-import logo22 from '../assets/logosss/22.png';
-import logo33 from '../assets/logosss/33.png';
-import logo44 from '../assets/logosss/44.png';
-import logo55 from '../assets/logosss/55.png';
-import logo66 from '../assets/logosss/66.png';
-import logo77 from '../assets/logosss/77.png';
-import logo88 from '../assets/logosss/88.png';
-import logo99 from '../assets/logosss/99.png';
-import logo111 from '../assets/logosss/111.png';
-import logo122 from '../assets/logosss/122.png';
-import logo133 from '../assets/logosss/133.png';
-import logo144 from '../assets/logosss/144.png';
-import logo155 from '../assets/logosss/155.png';
-import logo166 from '../assets/logosss/166.png';
-import logo177 from '../assets/logosss/177.png';
-import logo188 from '../assets/logosss/188.png';
-import logo199 from '../assets/logosss/199.png';
-import logo200 from '../assets/logosss/200.png';
-import logo211 from '../assets/logosss/211.png';
-import logo222 from '../assets/logosss/222.png';
-import logo233 from '../assets/logosss/233.png';
-import logo244 from '../assets/logosss/244.png';
-import logo255 from '../assets/logosss/255.png';
-import logo266 from '../assets/logosss/266.png';
-import logo277 from '../assets/logosss/277.png';
-import logo288 from '../assets/logosss/288.png';
-import logo299 from '../assets/logosss/299.png';
-import logo300 from '../assets/logosss/300.png';
-import logo311 from '../assets/logosss/311.png';
-import logo322 from '../assets/logosss/322.png';
-import logo333 from '../assets/logosss/333.png';
-import logo344 from '../assets/logosss/344.png';
-import logo355 from '../assets/logosss/355.png';
-
+// Cloudinary optimized logos - your actual uploaded logos
 const logos = [
-    logo10, logo11, logo22, logo33, logo44, logo55, logo66, logo77, logo88, logo99,
-    logo111, logo122, logo133, logo144, logo155, logo166, logo177, logo188, logo199, logo200,
-    logo211, logo222, logo233, logo244, logo255, logo266, logo277, logo288, logo299, logo300,
-    logo311, logo322, logo333, logo344, logo355
+    getCloudinaryUrl('logos/logo-10', { width: 200 }),
+    getCloudinaryUrl('logos/logo-11', { width: 200 }),
+    getCloudinaryUrl('logos/logo-22', { width: 200 }),
+    getCloudinaryUrl('logos/logo-33', { width: 200 }),
+    getCloudinaryUrl('logos/logo-44', { width: 200 }),
+    getCloudinaryUrl('logos/logo-55', { width: 200 }),
+    getCloudinaryUrl('logos/logo-66', { width: 200 }),
+    getCloudinaryUrl('logos/logo-77', { width: 200 }),
+    getCloudinaryUrl('logos/logo-88', { width: 200 }),
+    getCloudinaryUrl('logos/logo-99', { width: 200 }),
+    getCloudinaryUrl('logos/logo-111', { width: 200 }),
+    getCloudinaryUrl('logos/logo-122', { width: 200 }),
+    getCloudinaryUrl('logos/logo-133', { width: 200 }),
+    getCloudinaryUrl('logos/logo-144', { width: 200 }),
+    getCloudinaryUrl('logos/logo-155', { width: 200 }),
+    getCloudinaryUrl('logos/logo-166', { width: 200 }),
+    getCloudinaryUrl('logos/logo-177', { width: 200 }),
+    getCloudinaryUrl('logos/logo-188', { width: 200 }),
+    getCloudinaryUrl('logos/logo-199', { width: 200 }),
+    getCloudinaryUrl('logos/logo-200', { width: 200 }),
+    getCloudinaryUrl('logos/logo-211', { width: 200 }),
+    getCloudinaryUrl('logos/logo-222', { width: 200 }),
+    getCloudinaryUrl('logos/logo-233', { width: 200 }),
+    getCloudinaryUrl('logos/logo-244', { width: 200 }),
+    getCloudinaryUrl('logos/logo-255', { width: 200 }),
+    getCloudinaryUrl('logos/logo-266', { width: 200 }),
+    getCloudinaryUrl('logos/logo-277', { width: 200 }),
+    getCloudinaryUrl('logos/logo-288', { width: 200 }),
+    getCloudinaryUrl('logos/logo-299', { width: 200 }),
+    getCloudinaryUrl('logos/logo-300', { width: 200 }),
+    getCloudinaryUrl('logos/logo-311', { width: 200 }),
+    getCloudinaryUrl('logos/logo-322', { width: 200 }),
+    getCloudinaryUrl('logos/logo-333', { width: 200 }),
+    getCloudinaryUrl('logos/logo-344', { width: 200 }),
+    getCloudinaryUrl('logos/logo-355', { width: 200 }),
 ];
 
 const Clients = () => {

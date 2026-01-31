@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import './ValueProposition.css';
-import valueBg1 from '../assets/pexels-pavel-danilyuk-8205064.jpg';
-import valueBg2 from '../assets/pexels-august-de-richelieu-4427624.jpg';
-import valueBg3 from '../assets/pexels-leeloothefirst-6929011.jpg';
+import { getCloudinaryUrl } from '../utils/cloudinary';
+
+const valueBg1 = getCloudinaryUrl('services/service-2', { width: 1200, height: 1600 });
+const valueBg2 = getCloudinaryUrl('services/service-3', { width: 1200, height: 1600 });
+const valueBg3 = getCloudinaryUrl('services/service-4', { width: 1200, height: 1600 });
 
 const ValueProposition = ({ isEmbedded }) => {
     const [isVisible, setIsVisible] = useState(false);

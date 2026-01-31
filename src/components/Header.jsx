@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
+import { getCloudinaryUrl } from '../utils/cloudinary';
 
-import symbolLogo from '../assets/symbol og logo.png';
+const symbolLogo = getCloudinaryUrl('branding/symbol-logo', { width: 400 });
 
 const Header = () => {
     const [scrollState, setScrollState] = useState('state-top');

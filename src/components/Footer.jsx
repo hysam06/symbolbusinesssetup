@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Footer.css';
+import { getCloudinaryUrl } from '../utils/cloudinary';
 
-import symbolLogo from '../assets/symbol og logo.png';
+const symbolLogo = getCloudinaryUrl('branding/symbol-logo', { width: 400 });
 
 const Footer = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -36,9 +37,9 @@ const Footer = () => {
                     <div className="column-title">Find Us</div>
                     <a className="map-link" href="https://goo.gl/maps/nSqbZnRuqZFJL59MA" target="_blank" rel="noreferrer">
                         <div className="address">
-                            1925 Century Park East<br />
-                            Suite 1250<br />
-                            Los Angeles, CA 90067
+                            G.S14, P.B.No:111112<br />
+                            Al Sharafi Building.1<br />
+                            Al Karama, Dubai-UAE
                         </div>
                     </a>
                     <a className="privacy" href="https://api.actionistconsulting.com/wp-content/uploads/2024/04/2024-Actionist-Privacy-Notice.pdf" target="_blank" rel="noreferrer">Privacy Policy</a>

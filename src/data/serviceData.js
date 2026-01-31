@@ -1,12 +1,15 @@
-// Import images
-import img1 from '../assets/pexels-tima-miroshnichenko-5710948.jpg';
-import img2 from '../assets/pexels-pavel-danilyuk-8205064.jpg';
-import img3 from '../assets/pexels-august-de-richelieu-4427624.jpg';
-import img4 from '../assets/pexels-leeloothefirst-6929011.jpg';
-import img5 from '../assets/pexels-artempodrez-6779565.jpg';
-import legalImg1 from '../assets/legal.jpg';
-import legalImg2 from '../assets/legal (2).jpg';
-import immigrationImg from '../assets/immigration.jpg';
+// Import Cloudinary utility
+import { getCloudinaryUrl } from '../utils/cloudinary';
+
+// Cloudinary optimized images - using your uploaded images
+const img1 = getCloudinaryUrl('services/service-1', { width: 800, height: 600 });
+const img2 = getCloudinaryUrl('services/service-2', { width: 800, height: 600 });
+const img3 = getCloudinaryUrl('services/service-3', { width: 800, height: 600 });
+const img4 = getCloudinaryUrl('services/service-4', { width: 800, height: 600 });
+const img5 = getCloudinaryUrl('services/service-5', { width: 800, height: 600 });
+const legalImg1 = getCloudinaryUrl('services/legal-1', { width: 800, height: 600 });
+const legalImg2 = getCloudinaryUrl('services/legal-2', { width: 800, height: 600 });
+const immigrationImg = getCloudinaryUrl('services/immigration', { width: 800, height: 600 });
 
 export const serviceData = {
     main: [

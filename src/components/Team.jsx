@@ -1,11 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Team.css';
-
-import './Team.css';
 import DotPattern from './DotPattern';
+import { getCloudinaryUrl } from '../utils/cloudinary';
 
-// import teamBg from '../assets/pexels-alex-dos-santos-305643819-33077896.jpg';
-import founderImg from '../assets/our founder.jpeg';
+const founderImg = getCloudinaryUrl('team/founder', { width: 600, height: 800 });
 
 const Team = () => {
     const [isVisible, setIsVisible] = useState(false);

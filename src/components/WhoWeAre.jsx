@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import aboutUsImg from '../assets/about us.jpg';
+import { getCloudinaryUrl } from '../utils/cloudinary';
 import './WhoWeAre.css';
+
+const aboutUsImg = getCloudinaryUrl('about/about-us', { width: 1200, height: 800 });
 
 const WhoWeAre = () => {
     const [isVisible, setIsVisible] = useState(false);

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Contact.css';
-import contactBg from '../assets/pexels-alex-andrews-271121-821754.jpg';
+import { getCloudinaryUrl } from '../utils/cloudinary';
+
+const contactBg = getCloudinaryUrl('backgrounds/contact-bg', { width: 1920, height: 1080 });
 
 const Contact = () => {
     const [isVisible, setIsVisible] = useState(false);

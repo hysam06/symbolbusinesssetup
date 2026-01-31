@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Mission.css';
-import missionBg from '../assets/pexels-artempodrez-6779565.jpg';
+import { getCloudinaryUrl } from '../utils/cloudinary';
 import ValueProposition from './ValueProposition';
 import AnimatedGridPattern from './AnimatedGridPattern';
+
+const missionBg = getCloudinaryUrl('services/service-5', { width: 1920, height: 1080 });
 
 const Mission = () => {
     return (
