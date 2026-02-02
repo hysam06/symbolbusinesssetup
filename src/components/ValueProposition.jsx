@@ -35,6 +35,7 @@ const ValueProposition = ({ isEmbedded }) => {
             <div className="mask">
                 <h3 className="title">Our Value Proposition</h3>
             </div>
+
             <div className="panel-blocks">
                 <div className="block-value block-value">
                     <figure className="image wp-image mode-intrinsic-ratio has-background-color is-orientation-portrait object-fit-cover">
@@ -81,6 +82,7 @@ const ValueProposition = ({ isEmbedded }) => {
                     <div className="mask"><div className="text">Our professional service for drafting, reviewing, and organizing all essential business documents with accuracy and compliance. We ensure your paperwork is complete, error-free, and ready for fast approvals.</div></div>
                 </div>
             </div>
+
             {location.pathname !== '/mission' && (
                 <div className="panel-button">
                     <a href="/mission" className="wp-link button global-button has-fill forward" style={{ borderColor: 'var(--color-dark-purple)', color: 'var(--color-dark-purple)' }}>

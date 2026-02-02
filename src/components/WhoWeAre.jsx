@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { getCloudinaryUrl } from '../utils/cloudinary';
 import './WhoWeAre.css';
 
-const aboutUsImg = getCloudinaryUrl('about/about-us', { width: 1200, height: 800 });
+// Using versioned URL to ensure the latest image loads (v1770036145)
+const aboutUsImg = 'https://res.cloudinary.com/dlnygpreh/image/upload/w_1200,h_800,c_fill,f_auto,q_auto,g_auto/v1770036145/about/about-us.jpg';
 
 const WhoWeAre = () => {
     const [isVisible, setIsVisible] = useState(false);

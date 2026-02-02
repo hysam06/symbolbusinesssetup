@@ -1,7 +1,13 @@
-const cloudinary = require('cloudinary').v2;
-const fs = require('fs');
-const path = require('path');
-require('dotenv').config();
+import { v2 as cloudinary } from 'cloudinary';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+dotenv.config();
 
 // Configure Cloudinary from environment variables
 cloudinary.config({
@@ -23,7 +29,7 @@ const imageMapping = [
     { local: 'src/assets/immigration.jpg', cloudinary: 'services/immigration' },
 
     // About image
-    { local: 'src/assets/about us.jpg', cloudinary: 'about/about-us' },
+    { local: 'src/assets/about us (2).jpg', cloudinary: 'about/about-us' },
 
     // Background images
     { local: 'src/assets/pexels-tima-miroshnichenko-5717562.jpg', cloudinary: 'backgrounds/services-bg' },

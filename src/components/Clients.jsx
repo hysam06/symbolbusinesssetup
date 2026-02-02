@@ -5,41 +5,14 @@ import { getCloudinaryUrl } from '../utils/cloudinary';
 
 // Cloudinary optimized logos - your actual uploaded logos
 const logos = [
-    getCloudinaryUrl('logos/logo-10', { width: 200 }),
-    getCloudinaryUrl('logos/logo-11', { width: 200 }),
-    getCloudinaryUrl('logos/logo-22', { width: 200 }),
-    getCloudinaryUrl('logos/logo-33', { width: 200 }),
-    getCloudinaryUrl('logos/logo-44', { width: 200 }),
-    getCloudinaryUrl('logos/logo-55', { width: 200 }),
-    getCloudinaryUrl('logos/logo-66', { width: 200 }),
-    getCloudinaryUrl('logos/logo-77', { width: 200 }),
-    getCloudinaryUrl('logos/logo-88', { width: 200 }),
-    getCloudinaryUrl('logos/logo-99', { width: 200 }),
-    getCloudinaryUrl('logos/logo-111', { width: 200 }),
-    getCloudinaryUrl('logos/logo-122', { width: 200 }),
-    getCloudinaryUrl('logos/logo-133', { width: 200 }),
-    getCloudinaryUrl('logos/logo-144', { width: 200 }),
-    getCloudinaryUrl('logos/logo-155', { width: 200 }),
-    getCloudinaryUrl('logos/logo-166', { width: 200 }),
-    getCloudinaryUrl('logos/logo-177', { width: 200 }),
-    getCloudinaryUrl('logos/logo-188', { width: 200 }),
-    getCloudinaryUrl('logos/logo-199', { width: 200 }),
-    getCloudinaryUrl('logos/logo-200', { width: 200 }),
-    getCloudinaryUrl('logos/logo-211', { width: 200 }),
-    getCloudinaryUrl('logos/logo-222', { width: 200 }),
-    getCloudinaryUrl('logos/logo-233', { width: 200 }),
-    getCloudinaryUrl('logos/logo-244', { width: 200 }),
-    getCloudinaryUrl('logos/logo-255', { width: 200 }),
-    getCloudinaryUrl('logos/logo-266', { width: 200 }),
-    getCloudinaryUrl('logos/logo-277', { width: 200 }),
-    getCloudinaryUrl('logos/logo-288', { width: 200 }),
-    getCloudinaryUrl('logos/logo-299', { width: 200 }),
-    getCloudinaryUrl('logos/logo-300', { width: 200 }),
-    getCloudinaryUrl('logos/logo-311', { width: 200 }),
-    getCloudinaryUrl('logos/logo-322', { width: 200 }),
-    getCloudinaryUrl('logos/logo-333', { width: 200 }),
-    getCloudinaryUrl('logos/logo-344', { width: 200 }),
-    getCloudinaryUrl('logos/logo-355', { width: 200 }),
+    getCloudinaryUrl('logos/logo-10', { width: 120 }),
+    getCloudinaryUrl('logos/logo-11', { width: 120 }),
+    getCloudinaryUrl('logos/logo-22', { width: 120 }),
+    getCloudinaryUrl('logos/logo-33', { width: 120 }),
+    getCloudinaryUrl('logos/logo-44', { width: 120 }),
+    getCloudinaryUrl('logos/logo-55', { width: 120 }),
+    getCloudinaryUrl('logos/logo-66', { width: 120 }),
+    getCloudinaryUrl('logos/logo-77', { width: 120 }),
 ];
 
 const Clients = () => {
@@ -98,14 +71,6 @@ const Clients = () => {
                                 </figure>
                             ))}
                         </div>
-                    </div>
-                </div>
-
-                <div className="trust-badge">
-
-                    <div className="badge-text">
-                        <strong>Trusted by 50+ Government Entities</strong>
-                        <p>Direct relationships with all major UAE government departments and free zones.</p>
                     </div>
                 </div>
 

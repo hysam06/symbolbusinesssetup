@@ -22,14 +22,22 @@ const Services = () => {
                     observer.disconnect();
                 }
             },
-            { threshold: 0.1 }
+            { threshold: 0.05 } // Reduced threshold for better mobile detection
         );
 
         if (sectionRef.current) {
             observer.observe(sectionRef.current);
         }
 
-        return () => observer.disconnect();
+        // Fallback: Force visibility after 500ms if observer hasn't fired
+        const fallbackTimer = setTimeout(() => {
+            setIsVisible(true);
+        }, 500);
+
+        return () => {
+            observer.disconnect();
+            clearTimeout(fallbackTimer);
+        };
     }, []);
 
     // Combine all services

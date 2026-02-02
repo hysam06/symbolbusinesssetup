@@ -401,6 +401,14 @@
     .page-services {
         padding-top: 100px;
     }
+
+    /* Force content visibility on mobile to prevent loading issues */
+    .services-page-title,
+    .services-search-container,
+    .services-grid {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
 }
 
 /* Animation Initial States */

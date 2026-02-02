@@ -19,6 +19,7 @@ import ScrollToTop from './components/ScrollToTop';
 import HomeContact from './components/HomeContact'; // New import
 import ServiceDetail from './components/ServiceDetail';
 import ServicesPreview from './components/ServicesPreview';
+import GovernmentTrust from './components/GovernmentTrust';
 
 // ... imports ...
 
@@ -48,6 +49,7 @@ function App() {
             <WhoWeAre />
             <Clients />
             <ServicesPreview />
+            <GovernmentTrust />
             <HomeContact /> {/* Replaced ValueProposition */}
             <Footer />
           </div>

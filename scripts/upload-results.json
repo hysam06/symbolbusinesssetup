@@ -48,10 +48,10 @@
     "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1769871509/services/immigration.jpg"
   },
   {
-    "local": "src/assets/about us.jpg",
+    "local": "src/assets/about us (2).jpg",
     "cloudinary": "about/about-us",
     "status": "success",
-    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1769871512/about/about-us.jpg"
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036145/about/about-us.jpg"
   },
   {
     "local": "src/assets/pexels-tima-miroshnichenko-5717562.jpg",
@@ -212,66 +212,79 @@
   {
     "local": "src/assets/logosss/233.png",
     "cloudinary": "logos/logo-233",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036179/logos/logo-233.png"
   },
   {
     "local": "src/assets/logosss/244.png",
     "cloudinary": "logos/logo-244",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036181/logos/logo-244.png"
   },
   {
     "local": "src/assets/logosss/255.png",
     "cloudinary": "logos/logo-255",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036183/logos/logo-255.png"
   },
   {
     "local": "src/assets/logosss/266.png",
     "cloudinary": "logos/logo-266",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036185/logos/logo-266.png"
   },
   {
     "local": "src/assets/logosss/277.png",
     "cloudinary": "logos/logo-277",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036186/logos/logo-277.png"
   },
   {
     "local": "src/assets/logosss/288.png",
     "cloudinary": "logos/logo-288",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036188/logos/logo-288.png"
   },
   {
     "local": "src/assets/logosss/299.png",
     "cloudinary": "logos/logo-299",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036191/logos/logo-299.png"
   },
   {
     "local": "src/assets/logosss/300.png",
     "cloudinary": "logos/logo-300",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036192/logos/logo-300.png"
   },
   {
     "local": "src/assets/logosss/311.png",
     "cloudinary": "logos/logo-311",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036194/logos/logo-311.png"
   },
   {
     "local": "src/assets/logosss/322.png",
     "cloudinary": "logos/logo-322",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036195/logos/logo-322.png"
   },
   {
     "local": "src/assets/logosss/333.png",
     "cloudinary": "logos/logo-333",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036196/logos/logo-333.png"
   },
   {
     "local": "src/assets/logosss/344.png",
     "cloudinary": "logos/logo-344",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036197/logos/logo-344.png"
   },
   {
     "local": "src/assets/logosss/355.png",
     "cloudinary": "logos/logo-355",
-    "status": "error"
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036198/logos/logo-355.png"
   }
 ]

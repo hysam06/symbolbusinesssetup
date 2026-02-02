@@ -56,8 +56,8 @@ const Hero = () => {
                 <div className="background-color" style={{ backgroundColor: 'rgb(239, 142, 7)' }}></div>
             </figure>
             <h2 className="text">
-                We are action-oriented strategists. <br />
-                We help our clients achieve great things.
+                Strategic business setup solutions. <br />
+                Seamless documentation, licensing, and company formation—done right
             </h2>
         </div>
     );
