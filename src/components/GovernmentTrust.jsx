@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './GovernmentTrust.css';
 import AnimatedGridPattern from './AnimatedGridPattern';
-import { getCloudinaryUrl } from '../utils/cloudinary';
 
 const GovernmentTrust = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -41,7 +40,7 @@ const GovernmentTrust = () => {
             <div className="gov-trust-content">
                 <div className="gov-logos-container">
                     <img
-                        src={getCloudinaryUrl('branding/gov-logos')}
+                        src="https://res.cloudinary.com/dlnygpreh/image/upload/f_auto,q_auto/v1770139990/branding/gov-logos.png"
                         alt="Government Entities Logos"
                         className="gov-logos-image"
                     />
