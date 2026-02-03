@@ -38,6 +38,9 @@ const imageMapping = [
     // Logo
     { local: 'src/assets/symbol og logo.png', cloudinary: 'branding/symbol-logo' },
 
+    // Government logos
+    { local: 'src/assets/gov logos.png', cloudinary: 'branding/gov-logos' },
+
     // Contact background
     { local: 'src/assets/pexels-alex-andrews-271121-821754.jpg', cloudinary: 'backgrounds/contact-bg' },
 ];

@@ -48,10 +48,10 @@
     "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1769871509/services/immigration.jpg"
   },
   {
-    "local": "src/assets/about us (2).jpg",
+    "local": "src/assets/about us.jpg",
     "cloudinary": "about/about-us",
     "status": "success",
-    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770036145/about/about-us.jpg"
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770139985/about/about-us.jpg"
   },
   {
     "local": "src/assets/pexels-tima-miroshnichenko-5717562.jpg",
@@ -70,6 +70,12 @@
     "cloudinary": "branding/symbol-logo",
     "status": "success",
     "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1769871517/branding/symbol-logo.png"
+  },
+  {
+    "local": "src/assets/gov logos.png",
+    "cloudinary": "branding/gov-logos",
+    "status": "success",
+    "url": "https://res.cloudinary.com/dlnygpreh/image/upload/v1770139990/branding/gov-logos.png"
   },
   {
     "local": "src/assets/pexels-alex-andrews-271121-821754.jpg",
