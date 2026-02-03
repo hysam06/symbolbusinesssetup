@@ -48,7 +48,7 @@
     max-width: 1200px;
     padding: 0 20px;
     width: 100%;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
@@ -62,6 +62,9 @@
     width: 100%;
     height: auto;
     display: block;
+    opacity: 1 !important;
+    visibility: visible !important;
+    object-fit: contain;
 }
 
 /* Trust Badge */
